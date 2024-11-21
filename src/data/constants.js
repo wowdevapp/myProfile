@@ -155,7 +155,7 @@ export const experiences = [
     img: "https://media.licdn.com/dms/image/v2/C560BAQHayjny8iY6zg/company-logo_200_200/company-logo_200_200/0/1630630349350/shifteo_logo?e=2147483647&v=beta&t=c3tz1Ox4hiEkI4m9l9TGX5kgjYvDagMYn3mpyCd4PCc",
     role: "Senior Frontend developer",
     company: "Shifteo",
-    date: "May 2023 - Present",
+    date: "sept 2021 - Present",
     desc: `
       At Shifteo, I served as a Senior Developer contributing to two significant enterprise solutions: an ERP system (Omnevo) 
       and a remarketing platform (Uzerly). Throughout my tenure, 
