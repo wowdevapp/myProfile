@@ -14,6 +14,7 @@ import {
   SocialMediaIcons,
   SocialMediaIcon,
   ResumeButton,
+  ImgContainer,
 } from "./HeroStyle";
 import HeroImg from "../../images/HeroImage.jpg";
 import Typewriter from "typewriter-effect";
@@ -50,7 +51,9 @@ const HeroSection = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <Img src={HeroImg} alt="hero-image" />
+            <ImgContainer>
+              <Img src={HeroImg} alt="hero-image" />
+            </ImgContainer>
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>

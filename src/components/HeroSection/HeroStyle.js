@@ -1,5 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import _default from "../../themes/default";
+
+const rotate = keyframes`
+  0% {
+    transform: translate(0%,0%) rotate(0deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(360deg);
+  }
+`;
 
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
@@ -92,14 +101,45 @@ export const HeroRightContainer = styled.div`
   }
 `;
 
-export const Img = styled.img`
+export const ImgContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
   max-width: 400px;
   max-height: 400px;
-  border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.primary};
+
+  &::after,&::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(transparent 5%,${({ theme }) => theme.primary});
+    left:50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    z-index: -1;
+    padding: 1px;
+    animation: ${rotate} 6s linear infinite;
+    /* inset: 0;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(
+      45deg,
+      ${({ theme }) => theme.primary},
+      #8b5cf6,
+      #3b82f6
+    );
+    mask: 
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude; */
+  }
+  /* Optional overlay to enhance the glow effect */
+  &::before {
+    filter: blur(2px);
+    opacity: 0.8;
+  }
 
   @media (max-width: 768px) {
     max-width: 400px;
@@ -110,6 +150,13 @@ export const Img = styled.img`
     max-width: 280px;
     max-height: 280px;
   }
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 `;
 
 export const Title = styled.div`
