@@ -121,6 +121,7 @@ export const ImgContainer = styled.div`
     z-index: -1;
     padding: 1px;
     animation: ${rotate} 6s linear infinite;
+    animation-delay: 6s;
     /* inset: 0;
     border-radius: 50%;
     padding: 2px;
